@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @MapperScan("com.dbdr.mapper")
-public class MyBatisConfig {
+public class DataSourceConfig {
 
 	@Bean
 	@ConfigurationProperties(prefix = "spring.datasource.hikari")
