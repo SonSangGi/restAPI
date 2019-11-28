@@ -1,0 +1,26 @@
+unKnown:
+  code: "-9999"
+  msg: "알수 없는 오류가 발생하였습니다."
+notFound:
+  code: "404"
+  msg: "잘못된 URL입니다."
+connectionFailed:
+  code: "-3003"
+  msg: "데이터베이스 서버 연결에  실패하였습니다."
+# 권한 관련
+entryPointException:
+  code: "-2002"
+  msg: "토큰이 없거나 만료되었습니다."
+accessDenied:
+  code: "-2001"
+  msg: "접근 권한이 없습니다."
+# 유저 관련
+signinFailed:
+  code: "-1001"
+  msg: "계정이 존재하지 않거나 아이디 또는 비밀번호가 정확하지 않습니다."
+userNotFound:
+  code: "-1002"
+  msg: "존재하지 않는 유저입니다."
+duplicateUsers:
+  code: "-1003"
+  msg: "중복된 유저입니다."

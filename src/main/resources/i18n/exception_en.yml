@@ -1,0 +1,9 @@
+unKnown:
+  code: "-9999"
+  msg: "An unknown error has occurred"
+notFound:
+  code: "404"
+  msg: "Not Found"
+signinFailed:
+  code: "-1001"
+  msg: "Your account does not exist or your id or password is incorrect."

@@ -13,14 +13,24 @@ import java.util.Arrays;
 
 @Service
 @RequiredArgsConstructor
-public class UserDetailServiceImpl implements UserDetailsService {
+public class UserService implements UserDetailsService {
 
 	private final UserMapper userMapper;
 
 	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userMapper.findByUserId("");
+	public UserDetails loadUserByUsername(String userPk) throws UsernameNotFoundException {
+		return userMapper.findByUserId(userPk);
+	}
 
-		return new org.springframework.security.core.userdetails.User(user.getId(),user.getPassword(), Arrays.asList(new SimpleGrantedAuthority("user")));
+	public User findByUserId(String id){
+		return userMapper.findByUserId(id);
+	}
+
+	public boolean checkUserId(String id) {
+		return userMapper.checkUserId(id);
+	}
+
+	public void modifyUser(User user) {
+		userMapper.modifyUser(user);
 	}
 }
